@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module defines a class to manage file storage for hbnb clone"""
 import json
+import sys
 from models.base_model import BaseModel
 from models.user import User
 from models.place import Place
@@ -93,5 +94,5 @@ class FileStorage:
             pass
 
     def close(self):
-        """Call the reload method."""
+        """calls reload() for deserializing the JSON file to objects."""
         self.reload()
