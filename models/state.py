@@ -1,14 +1,12 @@
 #!/usr/bin/python3
 """ State Module for HBNB project """
 import models
-from os import getenv
-from models.base_model import Base
-from models.base_model import BaseModel
+from models.base_model import BaseModel, Base
 from models.city import City
-from sqlalchemy import Column
-from sqlalchemy import String
+from os import getenv
+import sqlalchemy
+from sqlalchemy import Column, String, ForeignKey
 from sqlalchemy.orm import relationship
-
 
 class State(BaseModel, Base):
     """Represents a state for a MySQL database.
